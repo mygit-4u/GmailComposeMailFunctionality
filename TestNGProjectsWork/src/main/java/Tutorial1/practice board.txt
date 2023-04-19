@@ -1,0 +1,24 @@
+
+public static WebDriver driver;
+
+
+WebDriverManager.chromedriver().setup();
+
+	driver= new ChromeDriver();
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+	driver.manage().window().maximize();
+	
+	driver.get("https://www.google.com);
+	
+	
+	File f =new File("path");
+		boolean x = f.exists()
+		System.out.println(x)
+	FileInputeStream fis= new FileInputeStream(f);
+	
+	XSSFWorkbook workbook = new XSSFworkbook(fis);
+	
+	XSSFSheet sheet = workbook.getSheetAt(0);
+	String fword =sheet.getRow(0).getCell(0).getStringCellValue();
+
